@@ -207,7 +207,7 @@ function getResults (){
     const getAnswer = this.parentElement.getAttribute("data-correct");
     if(this.innerHTML === getAnswer) {
         score = score + parseInt(this.parentElement.getAttribute("data-value")); 
-        scoreDisplay.innerHTML = score;
+        scoreDisplay.innerHTML = 'The score is ' + score;;
         this.parentElement.classList.add("correct-answer");
         setTimeout(() => {
            // console.log(this.parentElement.firstChild);
@@ -219,6 +219,8 @@ function getResults (){
         },100)
     }
     else{
+        score = score - parseInt(this.parentElement.getAttribute("data-value"));
+        scoreDisplay.innerHTML = 'The score is ' + score;
         cardOfButton.classList.add("wrong-answer");
         setTimeout(() => {
             // console.log(this.parentElement.firstChild);
@@ -226,7 +228,7 @@ function getResults (){
              while(cardOfButton.firstChild != null){
                  cardOfButton.removeChild(cardOfButton.lastChild);
              }
-             cardOfButton.innerHTML = 0;
+             cardOfButton.innerHTML = '-'+cardOfButton.getAttribute("data-value");
          },100);
      }
      cardOfButton.removeEventListener("click", flipCard);
