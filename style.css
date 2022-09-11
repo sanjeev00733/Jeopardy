@@ -1,0 +1,51 @@
+body{
+    padding: 0;
+    margin: 0;
+background: gray;
+color: #fff;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+.genre-title{
+font-weight: strong;
+font-size: 2em;
+}
+.genre-category{
+     width: 170px; 
+ align-items: center;
+ margin: 0 auto;
+}
+#game{
+
+/* background:rgb(186, 210, 34); */
+
+margin: 0 auto;
+display: flex;
+/* flex-direction: column; */
+align-content: center;
+justify-content: center;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    height: 100px;
+    background-color: cadetblue;
+    -webkit-box-shadow: -1px 0px 9px 8px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 9px 8px rgba(0,0,0,0.75);
+box-shadow: -1px 0px 9px 8px rgba(0,0,0,0.75);
+margin: 5px 15px;
+padding: 10px;
+text-align: center;
+font-size: 2em;
+text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+align-items: center;
+justify-content: center;
+}
+#score{
+color: #fff;
+}
